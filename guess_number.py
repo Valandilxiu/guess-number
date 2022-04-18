@@ -5,12 +5,15 @@
 
 import random
 
-r = random.randint(1, 100)
+start = int(input('請輸入範圍開始值'))
+stop = int(input('請輸入範圍結束值'))
+
+r = random.randint(start, stop)
 count = 0
 
 while True:
     x = int(input("請輸入一個數字，猜答案"))
-    count += 1
+    count = count + 1
     
     if r < x:
         print(x, '比答案大')
@@ -20,3 +23,5 @@ while True:
         print('終於答對了! 答案是', x)
         print('總共猜了', count, '次')
         break
+
+    print('你已經猜了', count, '次')
